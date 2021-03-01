@@ -1,0 +1,75 @@
+-- Made By meyou
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainGui = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local LumberTycoon = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local OpenMenu = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+MainGui.Name = "Main Gui"
+MainGui.Parent = ScreenGui
+MainGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainGui.Position = UDim2.new(0.72131145, 0, 0.635627508, 0)
+MainGui.Size = UDim2.new(0, 204, 0, 180)
+MainGui.Active = true
+MainGui.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = MainGui
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.Size = UDim2.new(0, 200, 0, 50)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Main Gui"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+LumberTycoon.Name = "Lumber Tycoon"
+LumberTycoon.Parent = MainGui
+LumberTycoon.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+LumberTycoon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LumberTycoon.Position = UDim2.new(0, 0, 0.277777791, 0)
+LumberTycoon.Size = UDim2.new(0, 90, 0, 20)
+LumberTycoon.Font = Enum.Font.SourceSans
+LumberTycoon.Text = "Lumber Tycoon"
+LumberTycoon.TextColor3 = Color3.fromRGB(255, 255, 255)
+LumberTycoon.TextSize = 14.000
+LumberTycoon.MouseButton1Down:connect(function()
+	_G.BloodKey = "AV76ODDY20212021HackerAV76"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodStillCool/666blood666/main/nil"))()
+end)
+
+TextLabel.Parent = MainGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.Size = UDim2.new(0, 20, 0, 20)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "X"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+OpenMenu.Name = "Open Menu"
+OpenMenu.Parent = ScreenGui
+OpenMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenMenu.Size = UDim2.new(0, 60, 0, 30)
+OpenMenu.Active = true
+OpenMenu.Draggable = true
+
+Open.Name = "Open"
+Open.Parent = OpenMenu
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.Size = UDim2.new(0, 60, 0, 30)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+	OpenMenu.Visible = true
+end)
