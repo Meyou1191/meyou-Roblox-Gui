@@ -4,7 +4,7 @@ local ScreenGui = Instance.new("ScreenGui")
 local MainGui = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local LumberTycoon = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
+local Quit = Instance.new("TextButton")
 local OpenMenu = Instance.new("Frame")
 local Open = Instance.new("TextButton")
 
@@ -17,6 +17,7 @@ MainGui.Parent = ScreenGui
 MainGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MainGui.Position = UDim2.new(0.72131145, 0, 0.635627508, 0)
 MainGui.Size = UDim2.new(0, 204, 0, 180)
+MainGui.Visible = false
 MainGui.Active = true
 MainGui.Draggable = true
 
@@ -45,21 +46,21 @@ LumberTycoon.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodStillCool/666blood666/main/nil"))()
 end)
 
-TextLabel.Parent = MainGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
-TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.Size = UDim2.new(0, 20, 0, 20)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "X"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 14.000
+Quit.Name = "Quit"
+Quit.Parent = MainGui
+Quit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Quit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Quit.Size = UDim2.new(0, 31, 0, 31)
+Quit.Font = Enum.Font.SourceSans
+Quit.Text = "X"
+Quit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Quit.TextSize = 14.000
+MainGui.Visible = false
 
 OpenMenu.Name = "Open Menu"
 OpenMenu.Parent = ScreenGui
 OpenMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 OpenMenu.Size = UDim2.new(0, 60, 0, 30)
-OpenMenu.Active = true
-OpenMenu.Draggable = true
 
 Open.Name = "Open"
 Open.Parent = OpenMenu
@@ -70,6 +71,3 @@ Open.Font = Enum.Font.SourceSans
 Open.Text = "Open"
 Open.TextColor3 = Color3.fromRGB(255, 255, 255)
 Open.TextSize = 14.000
-Open.MouseButton1Down:connect(function()
-	OpenMenu.Visible = true
-end)
