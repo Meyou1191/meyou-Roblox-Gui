@@ -17,7 +17,6 @@ MainGui.Parent = ScreenGui
 MainGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MainGui.Position = UDim2.new(0.72131145, 0, 0.635627508, 0)
 MainGui.Size = UDim2.new(0, 204, 0, 180)
-MainGui.Visible = false
 MainGui.Active = true
 MainGui.Draggable = true
 
@@ -55,12 +54,16 @@ Quit.Font = Enum.Font.SourceSans
 Quit.Text = "X"
 Quit.TextColor3 = Color3.fromRGB(255, 255, 255)
 Quit.TextSize = 14.000
-MainGui.Visible = false
+Quit.MouseButton1Down:connect(function()
+	MainGui.Visible = false
+end)
 
 OpenMenu.Name = "Open Menu"
 OpenMenu.Parent = ScreenGui
 OpenMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 OpenMenu.Size = UDim2.new(0, 60, 0, 30)
+OpenMenu.Draggable = true
+OpenMenu.Active = true
 
 Open.Name = "Open"
 Open.Parent = OpenMenu
@@ -71,3 +74,6 @@ Open.Font = Enum.Font.SourceSans
 Open.Text = "Open"
 Open.TextColor3 = Color3.fromRGB(255, 255, 255)
 Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+	MainGui.Visible = true
+end)
